@@ -1,4 +1,4 @@
-# Cloud Task Manager - Książka Azure w Praktyce by Mariusz Dworniczak
+# Cloud Task Manager  Oskar Rychta nr albumu 95559
  
 Projekt natywnej aplikacji chmurowej realizowany w architekturze 3-warstwowej.
  
