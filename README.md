@@ -1,4 +1,4 @@
-# Cloud Task Manager  Oskar Rychta nr albumu 95559
+# TODO list  Oskar Rychta nr albumu 95559
  
 Projekt natywnej aplikacji chmurowej realizowany w architekturze 3-warstwowej.
  
@@ -16,3 +16,5 @@ Ten projekt został zaplanowany z myślą o usługach PaaS (Platform as a Servic
 * [x] **Artefakt 2:** Środowisko wielokontenerowe uruchomione lokalnie(Docker Compose).
  
 > **Informacja:** Ten plik będzie ewoluował. W kolejnych etapach dodamy tutaj sekcje 'Quick Start', opis zmiennych środowiskowych oraz instrukcję wdrożenia (CI/CD).
+
+
