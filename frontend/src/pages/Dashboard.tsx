@@ -1,28 +1,34 @@
 import { useEffect, useState } from 'react';
 import api from '../services/api';
+
 interface CloudTask {
   id: number;
   name: string;
   isCompleted: boolean;
 }
+
 const Dashboard = () => {
   const [items, setItems] = useState<CloudTask[]>([]);
   const [error, setError] = useState("");
+
   useEffect(() => {
-    api.get('/tasks')
-      .then((res: any) => {
-        setItems(res.data);
+    api.get('/api/tasks')
+      .then((response) => {
+        console.log("Odpowiedź z API:", response);
+        console.log("Dane:", response.data);
+        setItems(response.data);
       })
-      .catch((err: any) => {
+      .catch((err) => {
         console.error("Szczegóły błędu:", err);
         setError("Błąd połączenia z API. Sprawdź, czy kontener cloud-backend działa na porcie 8081.");
       });
   }, []);
+
   return (
     <div style={{ padding: '20px', textAlign: 'center', fontFamily: 'Arial, sans-serif' }}>
       <h1>☁️ Cloud App Dashboard</h1>
       {error && (
-        <div style={{ background: '#fff3cd', color: '#856404', padding: '10px', borderRadius: '5px', margin: '20px auto', maxWidth: '400px' }}>
+        <div style={{ background: '#e2be49', color: '#856404', padding: '10px', borderRadius: '5px', margin: '20px auto', maxWidth: '400px' }}>
           {error}
         </div>
       )}
@@ -31,7 +37,7 @@ const Dashboard = () => {
         <ul style={{ listStyle: 'none', padding: 0 }}>
           {items.map((item) => (
             <li key={item.id} style={{ 
-              background: '#f8f9fa', 
+              background: '#355a80', 
               margin: '5px', 
               padding: '10px 20px', 
               borderRadius: '8px',
@@ -49,3 +55,5 @@ const Dashboard = () => {
 }
 
 export default Dashboard;
+
+
