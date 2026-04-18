@@ -55,5 +55,5 @@ jobs:
           app-name: 'cloud-task-manager-frontend-95559'
           package: dist
           startup-command: "pm2 serve /home/site/wwwroot --no-daemon --spa"
-          package: .
+          
           
