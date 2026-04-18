@@ -21,7 +21,7 @@ jobs:
           npm run build
         working-directory: ./frontend
         env:
-          VITE_API_URL: "Tu wstaw adres swojego backendu np. https://cloud-task-manager-api-h9fsfpd4gnaeaddz.germanywestcentral-01.azurewebsites.net/api"
+          VITE_API_URL: "https://cloud-task-manager-api-95559-bqd3etcggghqbjdu.germanywestcentral-01.azurewebsites.net/api"
 
       - name: Upload
         uses: actions/upload-artifact@v4
@@ -52,7 +52,7 @@ jobs:
       - name: Deploy
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'cloud-task-manager-frontend'
+          app-name: 'cloud-task-manager-frontend-95559'
           package: dist
           startup-command: "pm2 serve /home/site/wwwroot --no-daemon --spa"
           package: .
